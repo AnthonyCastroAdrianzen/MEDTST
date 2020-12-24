@@ -1,0 +1,23 @@
+Package: MedTst
+Type: Package
+Title: Medidas de testeo
+Version: 0.1.0
+Authors@R: c(person(given = "Anthony",
+                    family = "Castro",
+                    role = c("aut", "cre"),
+                    email = "acastroa@unp.edu.pe"),
+             person(given = "Jenny",
+                    family = "Patiño",
+                    role = c("aut"),
+                    email = "jmpatinoa@unal.edu.com"),
+             person(given = "Joselyn",
+                    family = "Perez",
+                    role = c("aut"),
+                    email = "joselyn.c.perez.aguirre@gmail.com"))
+Description: Este paquete servirá para aplicar medidas de testeo en Venta Directa- Modelos de regresión.
+Encoding: UTF-8
+LazyData: FALSE
+Imports:
+  openxlsx, dplyr
+Suggests:
+  readxl
