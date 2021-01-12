@@ -147,7 +147,7 @@ srv_inv<- function(base_testeo, models=c("LIM_INF", "Q_MOD_30", "Q_MOD_50", "Q_M
 
   base_testeo_1<- data.frame(base_testeo,
                              SRV= apply(base_testeo[,models_2], 2, function(x){ifelse(base_testeo$Q_REAL>x, x, base_testeo$Q_REAL)}),
-                             SRV_REAL= base_testeo$Q_REAL- base_testeo$Q_FAL,
+                             SRV_REAL= base_testeo$Q_REAL- base_testeo$Q_FALT,
                              INV= apply(base_testeo[,models_2], 2, function(x){ifelse(base_testeo$Q_REAL>x, 0, x-base_testeo$Q_REAL)})
   )
 
