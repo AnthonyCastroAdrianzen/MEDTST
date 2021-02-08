@@ -23,26 +23,23 @@ BASE01<- data.frame(PAIS= c(rep("PER",50), rep("COL",50)),
                     DESCRIPCION= paste("SKU", c(1234:1333), sep="_"),
                     CODI_VENT= c(1234:1333),
                     MODELO= "PRENAC",
-                    REAL= 1000+(1:100)*50+ rnorm(100,400,200),
-                    RG3= 1000+(1:100)*50+ rnorm(100,300,300),
-                    MKT= 1000+(1:100)*50+ rnorm(100,300,400),
-                    P30= 1000+(1:100)*50+ rnorm(100,100,20),
-                    P50= 1000+(1:100)*50+ rnorm(100,300,20),
-                    P70= 1000+(1:100)*50+ rnorm(100,500,20),
-                    P90= 1000+(1:100)*50+ rnorm(100,600,10)
+                    Q_REAL= 1000+(1:100)*50+ rnorm(100,400,200),
+                    Q_RG3= 1000+(1:100)*50+ rnorm(100,300,300),
+                    Q_MKT= 1000+(1:100)*50+ rnorm(100,300,400),
+                    Q_30= 1000+(1:100)*50+ rnorm(100,100,20),
+                    Q_50= 1000+(1:100)*50+ rnorm(100,300,20),
+                    Q_70= 1000+(1:100)*50+ rnorm(100,500,20),
+                    Q_90= 1000+(1:100)*50+ rnorm(100,600,10)
 )
 
-# Lo ideal es que se especifique todo como "Q_" seguido del modelo o de RG3, MKT, o REAL, pero podemos correrlo como está:
+# Es necesario que se especifique todo como "Q_" seguido del modelo o de RG3, MKT, o REAL:
 
-# Primero corremos sin identificar los percentiles que necesito, la función me generará el Besty solamente evaluando el P30, P50, P70
+# Primero corremos sin identificar los percentiles que necesito, la función me generará el Besty solamente evaluando el Q_30, Q_50, Q_70
 BASE02<- gen_q_besty(BASE01)
 
-# También le podemos especificar algun percentil más, por ejemplo que el Besty lo halle también hasta el P90.
+# También le podemos especificar algun percentil más, por ejemplo que el Besty lo halle también hasta el Q_90.
 
-BASE03<- gen_q_besty(BASE01,models = c("P_30", "P_50", "P_70", "P90"))
-
-# O también puede ser:
-BASE04<- gen_q_besty(BASE01,models = c("Q_30", "Q_50", "Q_70", "Q90"))
+BASE04<- gen_q_besty(BASE01,models = c("Q_30", "Q_50", "Q_70", "Q_90"))
 
 }
 \keyword{accuracy}
