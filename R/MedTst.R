@@ -71,15 +71,15 @@ gen_q_besty<- function(df_base, models=c("Q_30", "Q_50", "Q_70")) {
   n_prod_total <- nrow(df_base)
   nomb_col_pre<- colnames(df_base)
   nomb_col<- nomb_col_pre
-  nomb_col[grepl("REAL",nomb_col)]<- "Q_REAL"
+  #nomb_col[grepl("REAL",nomb_col)]<- "Q_REAL"
   perc<- c("2.5",seq(10,90,by=10),"97.5")
   models_1<- models
 
-  for (i in 1: length(perc)){
+  #for (i in 1: length(perc)){
     #i=1
-    nomb_col[grepl(perc[i],nomb_col)]<- paste0("Q_",perc[i])
-    models_1[grepl(perc[i],models_1)]<- paste0("Q_",perc[i])
-  }
+   # nomb_col[grepl(perc[i],nomb_col)]<- paste0("Q_",perc[i])
+   # models_1[grepl(perc[i],models_1)]<- paste0("Q_",perc[i])
+  #}
 
   colnames(df_base)<- nomb_col
 
@@ -130,15 +130,15 @@ srv_inv<- function(base_testeo, models=c("LIM_INF", "Q_MOD_30", "Q_MOD_50", "Q_M
 
   nomb_col_pre<- colnames(base_testeo)
   nomb_col<- nomb_col_pre
-  nomb_col[grepl("REAL",nomb_col)]<- "Q_REAL"
+  #nomb_col[grepl("REAL",nomb_col)]<- "Q_REAL"
   perc<- c("2.5",seq(10,90,by=10),"97.5", "RG3", "MKT", "FALT")
   models_1<- models
 
-  for (i in 1: length(perc)){
+  #for (i in 1: length(perc)){
     #i=1
-    nomb_col[grepl(perc[i],nomb_col)]<- paste0("Q_",perc[i])
-    models_1[grepl(perc[i],models_1)]<- paste0("Q_",perc[i])
-  }
+   # nomb_col[grepl(perc[i],nomb_col)]<- paste0("Q_",perc[i])
+    #models_1[grepl(perc[i],models_1)]<- paste0("Q_",perc[i])
+  #}
 
   colnames(base_testeo)<- nomb_col
   drop_falt<- which(models_1 =="Q_FALT")
