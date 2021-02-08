@@ -125,7 +125,7 @@ gen_q_besty<- function(df_base, models=c("Q_30", "Q_50", "Q_70")) {
 
 
 # La función es:
-srv_inv<- function(base_testeo, models=c("LIM_INF", "Q_MOD_30", "Q_MOD_50", "Q_MOD_70","LIM_SUP","Q_BESTY","Q_RG3","Q_MKT","Q_FALT")){
+srv_inv<- function(base_testeo, models=c("LIM_INF", "Q_30", "Q_50", "Q_70","LIM_SUP","Q_BESTY","Q_RG3","Q_MKT","Q_FALT")){
 
 
   nomb_col_pre<- colnames(base_testeo)
