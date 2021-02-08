@@ -35,9 +35,9 @@ BASE01<- data.frame(PAIS= c(rep("PER",50), rep("COL",50)),
 )
 
 
-# Lo ideal es que se especifique todo como "Q_" seguido del modelo o de RG3, MKT, o REAL, pero podemos correrlo como está:
+# Es necesario que se especifique todo como "Q_" seguido del modelo o de RG3, MKT, o REAL:
 
-# Primero generamos el Q_BESTY, si no lo especificamos nos arrojará el más cercano al real entre P30, P50 y P70
+# Primero generamos el Q_BESTY, si no lo especificamos nos arrojará el más cercano al real entre Q_30, Q_50 y Q_70
 BASE02<- gen_q_besty(BASE01)
 
 # Ahora hacemos el cálculo del servicio e inventario
