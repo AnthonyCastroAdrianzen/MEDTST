@@ -1,0 +1,36 @@
+********************************************************
+Starting OCS Inventory NG Agent 2.10.1.0 setup on 03/01/2024 at 11:55:17
+Checking if setup not already running...OK.
+Checking Operating System...OK, Windows 2000 or higher.
+Command line is: "C:\Users\anthony.castro\Downloads\OCS-Windows-Agent-Setup-x64.exe"  /debug=2 /ca="Cacert.pem" /ssl=1 /server=https://ocsdupree.dupree.co/ocsinventory /tag="DUPE1357" /NOW /S /NOSPLASH
+Parsing command line arguments...OK.
+Checking for silent mode...Enabled.
+Checking for splash screen...Disabled.
+Checking if logged in user has Administrator privileges...OK.
+Creating directory <C:\ProgramData\OCS Inventory NG\Agent>...
+SetACL allowing Users / Power users read/write permissions on <C:\ProgramData\OCS Inventory NG\Agent>...Result: 0
+SetACL propagating inherited permissions on <C:\ProgramData\OCS Inventory NG\Agent\Download>...Result: 0
+Trying to determine if service was previously installed...No.
+Trying to stop service and kill processes...
+Trying to find process OcsSystray.exe...Result: No
+Trying to kill process OcsSystray.exe...Result: No
+Trying to kill process OcsService.exe...Result: 603
+Trying to kill process OCSInventory.exe...Result: 603
+Trying to kill process download.exe...Result: 603
+Trying to kill process inst32.exe...Result: 603
+Waiting 10 seconds for processes to terminate...
+Copying new files to directory <C:\Program Files\OCS Inventory Agent>...
+Windows XP or higher detected, installing default cURL library and MS CRT/MFC 9.0...
+Copying new files status is ;-)
+Writing TAG <DUPE1357> into <C:\ProgramData\OCS Inventory NG\Agent\admininfo.conf> file...
+Writing agent configuration file by launching ocsinventory.exe /SAVE_CONF...Result: 0
+Windows Advanced Firewall is not available (Vista or higher). Skip adding custom rules.
+[/NOW] used, so launching "C:\Program Files\OCS Inventory Agent\ocsinventory.exe"...Result: 4
+Creating startup menu shortCut <C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\OCS Inventory NG Systray.lnk> to start Systray applet...
+Checking if service OCS Inventory Service is registered into Windows Service Manager...No
+No service installed, so no need to unregister OCS Inventory Service from Windows Service Manager.
+Registering OCS Inventory Service into Windows Service Manager...Result: 0.
+Starting OCS Inventory Service...Ok.
+SUCCESS: OCS Inventory NG Agent 2.10.1.0 successfully installed on 03/01/2024 at 11:56:01
+;-)
+ 
